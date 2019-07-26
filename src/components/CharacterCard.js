@@ -18,7 +18,7 @@ export default function CharacterCard (props) {
         <GreyHRCard/>
       <EpisodeLinkDiv>
         <img src={require(`../assets/episode-icon.png`)} alt="episode-icon" />
-        <GreyLink >Episodes</GreyLink>
+        <GreyLink to={`/episodes/`}>Episodes</GreyLink>
       </EpisodeLinkDiv>
     </CardDiv>
   )
