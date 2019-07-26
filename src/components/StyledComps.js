@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 export const CardDiv = styled.div`
-    border: 2px solid gray;
+    border: 2px solid #E1E1E1;
     border-radius: 8px;
     margin: 10px;
 `;
@@ -47,6 +47,10 @@ export const GreyHR = styled.hr`
     border-top: none;
     width: 100%;
     margin-left: -10px;
+`;
+
+export const GreyHRCard = styled(GreyHR)`
+    margin-left: 0;
 `;
 
 export const HRResDiv = styled.div`

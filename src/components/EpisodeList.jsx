@@ -3,7 +3,8 @@ import axios from "axios"
 import EpisodeCard from './EpisodeCard'
 import { LocationGrid } from './StyledComps'
 
-export default function EpisodeList() {
+export default function EpisodeList(props) {
+    const { character } = props
     const [episodes, setEpisodes] = useState([])
 
     useEffect(() => {
