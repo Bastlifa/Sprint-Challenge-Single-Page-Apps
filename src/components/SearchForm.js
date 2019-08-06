@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function SearchForm({ onSearch }) {
+export default function SearchForm({ onSearch, queryType }) {
   const [query, setQuery] = useState({
     name: ""
   })
@@ -8,12 +8,18 @@ export default function SearchForm({ onSearch }) {
     setQuery({ ...query, name: event.target.value })
   }
 
+  const handleSubmit = e =>
+  {
+    e.preventDefault()
+    onSearch(query.name)
+  }
+
   return (
     <section className="search-form">
-      <form onSubmit={() => onSearch(query)}>
+      <form onSubmit={handleSubmit}>
         <input
           onChange={handleInputChange}
-          placeholder="name"
+          placeholder={queryType}
           value={query.name}
           name="name"
         />
